@@ -8,8 +8,8 @@ SQLALCHEMY_ECHO = False
 
 # OAuth2 credentials
 #Change the ID and Secret key to the given in the Keys section in the developer dashboard
-CLIENT_ID= 'ABUFbu4kijy6LcyFGMIJVPHQQiDPOCpPrHl1gqksUOwH4D3WDW'
-CLIENT_SECRET = 'ccBBcGSoEXNjbFxXBeZAyWQafIK1Rsx05G9YTqhj'
+CLIENT_ID= <"Enter your client ID here">
+CLIENT_SECRET = <'Enter your Client sceret id here'>
 # Add this url to the Add url section in the developer dashboard
 REDIRECT_URI = 'http://localhost:5000/callback'
 
