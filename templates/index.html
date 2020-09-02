@@ -1,0 +1,39 @@
+<!-- HTML Declaration file to render the callback server for the test app -->
+{% block body %}
+  <h2>Python Test</h2>
+    
+    <script>
+    function hover(element) {
+        element.setAttribute('src', "{{ url_for('static', filename='C2QB_green_btn_lg_hover.png') }}");
+
+     }
+    function unhover(element) {
+        element.setAttribute('src', "{{ url_for('static', filename='C2QB_green_btn_lg_default.png') }}");
+    }
+    </script>
+
+    {% if session['is_authorized'] == True %}
+        <button type="submit" onClick="location.href = 'http://localhost:5000/reset-session';" >Reset Session</button>
+        <button type="submit" onClick="location.href = 'http://localhost:5000/company-info';" >Get Company Info</button>
+        {% if company_info %}
+            <p>{{ company_info }}</p>
+        {% endif %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li style="background-color:#E6E6FA;">{{ message[1] }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+	    {% endwith %}
+        <button type="submit" onClick="location.href = 'http://localhost:5000/invoice-sess';" >Get Invoice</button>
+
+    <h4>This is a sample app to get the data from Invoice database in the quickbooks using Python and flask modules using OAuth2</h4>
+
+    <a href="{{ url_for('auth') }}"><img id="my-img" src="{{ url_for('static', filename='C2QB_green_btn_lg_default.png') }}" onmouseover="hover(this);" onmouseout="unhover(this);" width=170 height=50/></a> 
+
+    {% endif %}
+    
+{% endblock %}
+
