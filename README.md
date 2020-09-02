@@ -2,7 +2,7 @@
 A sinple Quickbooks Api to get the invoice details and print them out in the kernel.
 
 ## Run Instructions
-To run the Application. This instruction assumes that you already have a Developer account and a sandbox setup.Follow the steps in order 
+To run the Application. This instruction assumes that you already have a Developer account and a sandbox setup.Follow the steps in order   
 1.) Get the ClientID and ClientSecretKeys from the keys subsection in the developer dashboard of the application and add them to the config.py file.  
 2.) Copy the Redirect URL from the config.py file and add it to the application.  
 3.) Launch the application by running the app.py file.  
@@ -11,7 +11,7 @@ To run the Application. This instruction assumes that you already have a Develop
 6.) The HTML file will give you the available operations after sucessfully authorizing it.  
 
 ## Requirements
-The project is developed using 
+The project is developed using  
 Python v3.6  
 requests v2.13.0  
 Flask v0.12  
